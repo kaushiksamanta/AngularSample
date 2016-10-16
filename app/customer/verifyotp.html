@@ -1,0 +1,93 @@
+<div dw-loading="otp">
+    <div id="otp-top-background">
+        <div class="container">
+            <div class="row" id="otp-top-height">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <p id="otp-top-welcome">
+                            Welcome To The Vivo Warriors
+                        </p>
+                        <p id="otp-top-cust-portal">
+                            Customer Portal
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="well">
+        <div class="container">
+            <div class="row" id="otp-row">
+                <div class="container" id="otp-container">
+                    <form name="otpForm"  novalidate autocomplete="off" ng-submit="validate_otp(otpForm.$valid)">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="otp-inside-padding">
+                            <div class="row">
+                                <p id="one-time-pwd">
+                                    Enter One Time Password
+                                </p>
+                                <p id="otp-text">
+                                    One Time Password (OTP) has been sent to your mobile ******{{phoneNumber}}, please enter the same here to login.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div id="otp-horizontal-row"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0">
+
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 center-alternative">
+                                    <input type="text" class="otp-number" name="value_1" maxlength="1" numbers-only="numbers-only" ng-model="otp.value_1" autocomplete="off" required>
+                                    <div class="error"
+                                         ng-show="otpForm.$submitted || otpForm.value_1.$dirty && otpForm.value_1.$invalid">
+                                        <small class="error text-danger" ng-show="otpForm.value_1.$error.required">
+                                            required.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 center-alternative">
+                                    <input type="text" class="otp-number" name="value_2" maxlength="1" numbers-only="numbers-only" ng-model="otp.value_2" autocomplete="off" required>
+                                    <div class="error"
+                                         ng-show="otpForm.$submitted || otpForm.value_2.$dirty && otpForm.value_2.$invalid">
+                                        <small class="error text-danger" ng-show="otpForm.value_2.$error.required">
+                                            required.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 center-alternative">
+                                    <input type="text" class="otp-number" name="value_3" maxlength="1" numbers-only="numbers-only" ng-model="otp.value_3" autocomplete="off" required>
+                                    <div class="error"
+                                         ng-show="otpForm.$submitted || otpForm.value_3.$dirty && otpForm.value_3.$invalid">
+                                        <small class="error text-danger" ng-show="otpForm.value_3.$error.required">
+                                            required.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 center-alternative">
+                                    <input type="text" class="otp-number" name="value_4" maxlength="1" numbers-only="numbers-only" ng-model="otp.value_4" autocomplete="off" required>
+                                    <div class="error"
+                                         ng-show="otpForm.$submitted || otpForm.value_4.$dirty && otpForm.value_4.$invalid">
+                                        <small class="error text-danger" ng-show="otpForm.value_4.$error.required">
+                                            required.
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0 center-alternative">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="otp-lower-section">
+                            <div class="row center-alternative">
+                                <button type="submit" class="page-scroll btn" id="submit-btn">Submit</button>
+                            </div>
+                            <div class="row center-alternative">
+                                <p style="cursor: pointer;" ng-click="resend()">Resend</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+
+a .logo{
+    width: 170px;
+    height: 40px;
+    margin-top: -10px;
+}
+
+#profile-logo{
+    width: 37px;
+    height: 37px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    left: 156px;
+}
+
+#profile-back{
+    width: 165px;
+    height: 27px;
+    border-radius: 8px;
+    background-color: #40faff;
+}
+
+#profile-text{
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    color: #0b1630;
+}
+
+.navbar-custom .nav li a {
+    font-family: Helvetica;
+    text-transform: initial;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+    color: #555;
+    background-color: #e7e7e7;
+    background: transparent;
+    cursor: pointer;
+}
+
+.black-color{
+    color: black !important;
+}
+
+
+@media only screen and (max-width: 450px) and (min-width: 280px) {
+    .black-color{
+        color: white !important;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width: 1200px){
+
+    a .logo {
+        width: 140px;
+        height: 36px;
+        margin-top: -10px;
+    }
+    #profile-back {
+        width: 150px;
+        height: 27px;
+        border-radius: 8px;
+        background-color: #40faff;
+    }
+    #well-class-padding {
+        padding-top: 5%;
+    }
+}

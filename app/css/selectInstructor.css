@@ -1,0 +1,645 @@
+#profile-name{
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    color: #0b1630;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#profile-instructor{
+    font-family: Graphik;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    color: #737373;
+    margin-top: -15px;
+}
+
+#badge{
+    position: absolute;
+    top: 215px;
+    left: 22px;
+}
+
+.leftside-btn{
+    width: inherit;
+    height: 37px;
+    border-radius: 8px;
+    background-color: #32426c;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+#star-positions{
+    position: absolute;
+    top: 237px;
+    left: 75px;
+}
+
+#well-class-padding{
+    padding-top: 4%;
+}
+
+#photo-frame{
+    width: 100%;
+    height: 230px;
+    background-color: #ffffff;
+    border: solid 3px #efefef;
+    padding: 7px 7px 0px 7px;
+}
+
+#margin-45{
+    margin-top: 45%;
+}
+
+#margin-12{
+    margin-top: 12%;
+}
+
+#top-description{
+    width: 100%;
+    height: 39px;
+    background-color: #0b1630;
+}
+
+#top-description-text{
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+#white-box{
+    width: 100%;
+    background-color: #ffffff;
+    border: solid 3px #efefef;
+    /*padding: 15px 35px 25px 25px;*/
+}
+
+.grey-box{
+    width: 100%;
+    background-color: #d8d8d8;
+    border: solid 3px #efefef;
+    padding: 15px 35px 25px 25px;
+}
+
+.description-text{
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.43;
+    color: #000000;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.description-line{
+    height: 2px;
+    opacity: 0.45;
+    background-color: #979797;
+    margin: 5px 15px 5px 15px;
+}
+
+#max-250{
+    font-family: Graphik;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 1.56;
+    text-align: right;
+    color: #8a8a8a;
+    margin: 0px 15px 0 15px;
+}
+
+#skills{
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    text-align: left;
+    margin: 0px 15px 0 15px;
+}
+
+#education{
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000000;
+    text-align: left;
+    margin: 0px 15px 0 15px;
+}
+
+.skill-list{
+    font-family: Graphik;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    text-align: left;
+    margin: 0px 15px 0 15px;
+}
+
+.texts-color{
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: normal;
+    letter-spacing: -0.3px;
+}
+
+.blue-round{
+    background-color: #32426c;
+    border-radius: 50px;
+    width: 93px;
+    height: 93px;
+    margin-left: 25px;
+}
+
+.skill-icon {
+    position: relative;
+    top: 28%;
+    left: 28%;
+}
+
+#edit-profile-icon{
+    position: absolute;
+    top: 4px;
+    left: 18px;
+}
+#edit-profile-icon-outer{
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    background-color: #0b1630;
+    float: left;
+    margin-right: 10px;
+}
+
+#edit-profile-text{
+    font-family: Graphik;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #727f8e;
+}
+
+.blue-tab{
+    width: 150px;
+    height: 41px;
+    background-color: #32426c;
+    border: solid 0.5px #32426c;
+    font-family: Helvetica;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+#single{
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#recurring{
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: -4px;
+}
+
+/* calender classes starts */
+
+.gmt{
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.box1{
+    width: 8%;
+    float: left;
+}
+
+.box2{
+    width: 3%;
+    height: 37px;
+    float: left;
+}
+
+.box3{
+    width: 89%;
+    border-radius: 8px;
+    float: left;
+}
+
+.box1 .box1-blank-upper{
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #1B253D;
+    height: 37px;
+}
+
+.box1 .box1-blank-lower-15{
+    width: 100%;
+    color: #FFF;
+    height: 15px;
+    background-color: #1B253D;
+}
+
+.box1 .time-slots{
+    width: 100%;
+    background-color: #1B253D;
+    height: 60px;
+    text-align: center;
+    color: #FFF;
+    padding: 25% 10% 10% 10%;
+}
+
+.box3 .box3-day-upper{
+    width:100%;
+    background-color: #1B253D;
+    height: 37px;
+    text-align: center;
+    color: #FFF;
+    padding: 10% 10% 10% 10%;
+    border-right: 1px solid grey;
+}
+
+.box3 .box3-blank-lower{
+    background:transparent;
+    height: 15px;
+    width: 100%;
+    border-right: 1px solid grey;
+}
+
+.box3 .box3-single-blank-lower{
+    background:transparent;
+    height: 15px;
+    width: 100%;
+}
+
+.box3 .box3-booked-slot{
+    width:100%;
+    background-color: #32426c;
+    height: 60px;
+    text-align: center;
+    color: #FFF;
+    border-right: 1px solid grey;
+}
+
+.box3 .box3-blocked-slot{
+    width:100%;
+    background-color: none;
+    height: 60px;
+    text-align: center;
+    color: #FFF;
+    border-right: 1px solid grey;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.box3 .box3-single-booked-slot{
+    height: 60px;
+    border-radius: 8px;
+    border: solid 1px #979797;
+    width: 100%;
+    background-color: #32426c;
+    text-align: center;
+    color: #FFF;
+}
+
+.box3 .box3-single-blocked-slot{
+    height: 60px;
+    border-radius: 8px;
+    border: solid 1px #979797;
+    width: 100%;
+    background-color: none;
+    text-align: center;
+    color: #FFF;
+}
+
+.box3 #single-header{
+    height: 37px;
+    border-radius: 8px;
+    background-color: #1b253d;
+}
+
+.box3 .single-day{
+    float: left;
+    width: 90px;
+}
+
+#single-header #date{
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+    height: inherit;
+    padding: 7px 10px 0px 10px;
+}
+
+#single-header #day{
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: right;
+    height: inherit;
+    padding: 7px 10px 0px 10px;
+}
+
+#single-calender-scrollbar{
+    padding-bottom: 20px;
+    padding-right: 20px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-face-color: #1B253D;
+    scrollbar-shadow-color: #FFFFFF;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-track-color: #FFFFFF;
+    scrollbar-arrow-color: #FFFFFF;
+}
+#single-calender-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+#single-calender-scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+#single-calender-scrollbar::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #1797be;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+#recurring-calender .box1{
+    width: 8%;
+    float: left;
+}
+
+#recurring-calender .box2{
+    width: 3%;
+    height: 37px;
+    float: left;
+}
+
+#recurring-calender .box3{
+    width: 100%;
+    border-radius: 8px;
+    float: left;
+}
+
+#recurring-calender-scrollbar{
+    padding-bottom: 20px;
+    padding-right: 20px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    scrollbar-face-color: #1B253D;
+    scrollbar-shadow-color: #FFFFFF;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-3dlight-color: #FFFFFF;
+    scrollbar-darkshadow-color: #FFFFFF;
+    scrollbar-track-color: #FFFFFF;
+    scrollbar-arrow-color: #FFFFFF;
+}
+#recurring-calender-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+#recurring-calender-scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+#recurring-calender-scrollbar::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    background: #1797be;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 450px) and (max-width: 768px){
+    #well-class-padding {
+        padding-top: 15%;
+    }
+    #photo-frame {
+        width: 36%;
+        height: 260px;
+        background-color: #ffffff;
+        border: solid 3px #efefef;
+        padding: 7px 7px 0px 7px;
+        margin-left: 30%;
+    }
+    #instructor-profile {
+        margin: 0 auto;
+        display: block;
+    }
+    #badge {
+        position: absolute;
+        top: 86%;
+        left: 33%;
+    }
+    #star-positions {
+        position: absolute;
+        top: 86%;
+        left: 41%;
+    }
+    #margin-45 {
+        margin-top: 10%;
+    }
+    #margin-12 {
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+    .leftside-btn {
+        width: 50%;
+        height: 37px;
+        border-radius: 8px;
+        background-color: #32426c;
+        font-family: Helvetica;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+        margin: 0 auto;
+        display: block;
+    }
+    .texts-color {
+        text-align: left;
+        padding-left: 15%;
+    }
+    .box1 {
+        width: 15%;
+        float: left;
+    }
+    .box2 {
+        width: 5%;
+        height: 37px;
+        float: left;
+    }
+    .box3 {
+        width: 80%;
+        border-radius: 8px;
+        float: left;
+    }
+    #recurring-calender .box1 {
+        width: 55px;
+        float: left;
+    }
+    #recurring-calender .box2 {
+        width: 10px;
+        height: 37px;
+        float: left;
+    }
+    #recurring-calender .box3 {
+        width: 1000px;
+        border-radius: 8px;
+        float: left;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width: 1002px){
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+}
+/*mobile phones*/
+@media only screen and (max-width: 450px) and (min-width: 280px) {
+    #photo-frame {
+        width: 65%;
+        height: 260px;
+        background-color: #ffffff;
+        border: solid 3px #efefef;
+        padding: 7px 7px 0px 7px;
+        margin-left: 20%;
+    }
+    #instructor-profile {
+        margin: 0 auto;
+        display: block;
+    }
+    #badge {
+        position: absolute;
+        top: 86%;
+        left: 27%;
+    }
+    #star-positions {
+        position: absolute;
+        top: 86%;
+        left: 41%;
+    }
+    #margin-45 {
+        margin-top: 10%;
+    }
+    #margin-12 {
+        margin-top: 3%;
+        margin-bottom: 6%;
+    }
+    .leftside-btn {
+        height: 37px;
+        border-radius: 8px;
+        background-color: #32426c;
+        font-family: Helvetica;
+        font-size: 15px;
+        font-weight: 400;
+        color: #ffffff;
+    }
+    .texts-color {
+        text-align: left;
+        padding-left: 15%;
+    }
+    .box1 {
+        width: 15%;
+        float: left;
+    }
+    .box2 {
+        width: 5%;
+        height: 37px;
+        float: left;
+    }
+    .box3 {
+        width: 80%;
+        border-radius: 8px;
+        float: left;
+    }
+    #recurring-calender .box1 {
+        width: 55px;
+        float: left;
+    }
+    #recurring-calender .box2 {
+        width: 10px;
+        height: 37px;
+        float: left;
+    }
+    #recurring-calender .box3 {
+        width: 1000px;
+        border-radius: 8px;
+        float: left;
+    }
+    #single-calender-scrollbar {
+         padding-bottom: 25px;
+         padding-right: 0px;
+    }
+    .box1 {
+        width: 55px;
+        float: left;
+    }
+    .box2 {
+        width: 10px;
+        height: 37px;
+        float: left;
+    }
+    .box3 {
+        width: 170px;
+        border-radius: 8px;
+        float: left;
+    }
+    #single-header #date {
+        font-family: Helvetica;
+        font-size: 10px;
+        font-weight: 100;
+        color: #ffffff;
+        text-align: left;
+        height: inherit;
+        padding: 7px 10px 0px 10px;
+    }
+    #single-header #day {
+        font-family: Helvetica;
+        font-size: 13px;
+        font-weight: 400;
+        color: #ffffff;
+        text-align: right;
+        height: inherit;
+        padding: 7px 10px 0px 10px;
+    }
+    #xs-single-cal{
+        width: 300px;
+    }
+    #well-class-padding {
+        padding-top: 22%;
+    }
+    .blue-round {
+        background-color: #32426c;
+        border-radius: 50px;
+        width: 80px;
+        height: 80px;
+        margin-left: 20px;
+    }
+    .blue-tab {
+        width: 45%;
+    }
+}

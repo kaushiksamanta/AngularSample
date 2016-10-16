@@ -1,0 +1,152 @@
+#otp-top-background{
+    background-image: url('../../app/img/banner/bitmap.png');
+}
+
+#otp-top-height{
+    height: 333px;
+}
+
+#otp-top-welcome{
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 50px;
+}
+
+#otp-top-cust-portal{
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: -20px;
+}
+
+#otp-row{
+    margin-top: -15%;
+    margin-bottom: 10%;
+}
+
+#otp-container{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#otp-inside-padding{
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 5% 10% 8% 10%;
+}
+
+#otp-horizontal-row{
+    height: 2px;
+    opacity: 0.45;
+    background-color: #979797;
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+#otp-lower-section{
+    padding: 5% 5% 5% 5%;
+}
+
+#one-time-pwd{
+    font-family: Helvetica;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #32426c;
+}
+
+#otp-text{
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+    text-align: center;
+    color: #434343;
+}
+
+.otp-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    background-color: #cccccc;
+    float: left;
+    margin-left: 10%;
+    margin-right: 3%;
+    border: 1px;
+    padding: 0px 0px 0px 15px;
+    font-size: 45px;
+    outline: none;
+}
+
+#submit-btn{
+    width: 300px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: #32426c;
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 450px) and (max-width: 768px){
+    #otp-row {
+        margin-top: -30%;
+        margin-bottom: 10%;
+    }
+    #otp-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+
+}
+/*mobile phones*/
+@media only screen and (max-width: 450px) and (min-width: 280px) {
+    #otp-top-height {
+        height: 303px;
+    }
+    #otp-top-welcome{
+        font-size: 22px;
+    }
+    #otp-top-cust-portal{
+        font-size: 24px;
+    }
+    #otp-row {
+        margin-top: -60%;
+        margin-bottom: 10%;
+    }
+    #one-time-pwd {
+        font-size: 22px;
+    }
+    #otp-text {
+        font-size: 13px;
+    }
+    #otp-container {
+         padding-left: 0%;
+         padding-right: 0%;
+    }
+    .otp-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        background-color: #cccccc;
+        float: left;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0px 0px 0px 10px;
+        font-size: 35px;
+    }
+    #submit-btn {
+        width: 100%;
+    }
+}

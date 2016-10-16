@@ -1,0 +1,85 @@
+<div dw-loading="login">
+    <div id="login-top-background">
+        <div class="container">
+            <div class="row" id="login-top-height">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                        <p id="login-top-welcome">
+                            Welcome To The Vivo Warriors
+                        </p>
+                        <p id="login-top-cust-portal">
+                            Customer Portal
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="well">
+        <div class="container">
+            <div class="row" id="login-row">
+                <div class="container" id="login-container">
+                    <form name="loginForm" novalidate autocomplete="off" ng-submit="login(loginForm.$valid)">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="login-inside-padding">
+                            <div class="row">
+                                <p id="login">
+                                    LOG IN
+                                </p>
+                            </div>
+                            <div class="row">
+                                <div id="login-horizontal-row"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label>Email Id</label>
+                                        <input type="email" name="email" ng-model="user.email" class="form-control input-grey" ng-pattern="/^.+@.+\..+$/" autocomplete="off" required>
+                                        <div class="error"
+                                             ng-show="loginForm.$submitted || loginForm.email.$dirty && loginForm.email.$invalid">
+                                            <small class="error text-danger" ng-show="loginForm.email.$error.required">
+                                                Email is required.
+                                            </small>
+                                            <small class="error text-danger"
+                                                   ng-show="loginForm.email.$invalid && !loginForm.email.$error.required">
+                                                Please insert a valid email.
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" name="password" class="form-control input-grey" ng-model="user.password" ng-pattern="/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/" autocomplete="off" required>
+                                        <div class="error"
+                                             ng-show="loginForm.$submitted || loginForm.password.$dirty && loginForm.password.$invalid">
+                                            <small class="error text-danger" ng-show="loginForm.password.$error.required">
+                                                Password is required.
+                                            </small>
+                                            <small class="error text-danger"
+                                                   ng-show="loginForm.password.$invalid && !loginForm.password.$error.required">
+                                                Must enter character,numeric and special character
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="login-lower-section">
+                            <div class="row center-alternative">
+                                <button type="submit" class="page-scroll btn" id="submit-btn">Log In</button>
+                            </div>
+                            <div class="row center-alternative">
+                                <a href="#app/forgotpassword">
+                                    <p>Forgot Password ?</p>
+                                </a>
+                            </div>
+                            <div class="row center-alternative">
+                                <p>Don't have an account ? Please Sign up <a href="#app/signup">here</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

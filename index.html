@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="vivo-cp">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   <meta name="description" content="{{app.description}}">
+   <meta name="keywords" content="app, responsive, angular, bootstrap, dashboard, admin">
+   <link rel="shortcut icon" href="app/img/fill-1.png">
+   <title data-ng-bind="pageTitle()">Vivo Warriors Customer</title>
+   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+   <link rel="stylesheet" href="app/css/vivo.css">
+   <link rel="stylesheet" href="app/css/header1.css">
+   <link rel="stylesheet" href="app/css/header2.css">
+   <link rel="stylesheet" href="app/css/footer.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="bower_components/angular-loading/angular-loading.css">
+   <link rel="stylesheet" href="vendor/intelinput/css/intlTelInput.css">
+   <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css">
+   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.8.5/css/selectize.default.css">
+</head>
+
+<body ng-controller="AppController" data-ng-class="{ 'layout-fixed' : app.layout.isFixed, 'aside-collapsed' : app.layout.isCollapsed, 'layout-boxed' : app.layout.isBoxed, 'layout-fs': app.useFullLayout, 'hidden-footer': app.hiddenFooter, 'layout-h': app.layout.horizontal, 'aside-float': app.layout.isFloat}">
+   <div data-ui-view="" data-autoscroll="false" class="wrapper"></div>
+   <script src="app/js/base.js"></script>
+   <script src="app/js/app.init.js"></script>
+   <script src="vendor/bootstrap/js/bootstrap.js"></script>
+   <script src="vendor/ui.bootstrap/ui-bootstrap-tpls-2.0.1.js"></script>
+   <script src="bower_components/spin.js/spin.js"></script>
+   <script src="bower_components/angular-loading/angular-loading.js"></script>
+   <script src="bower_components/angular-ui-select/dist/select.js"></script>
+   <script src="app/js/modules/config.js"></script>
+   <script src="app/js/modules/constants.js"></script>
+
+   <script src='//maps.googleapis.com/maps/api/js?key=AIzaSyARSHJ2mrz4R3TS77RRhGqaaMSAQLlJR5Q&libraries=places'></script>
+
+   <!--Controllers-->
+   <script src="app/js/modules/controllers/headers/header-ctrl.js"></script>
+   <script src="app/js/modules/controllers/main.js"></script>
+   <script src="app/js/modules/controllers/login/login-ctrl.js"></script>
+   <script src="app/js/modules/controllers/forgotPassword/forgot-password-ctrl.js"></script>
+   <script src="app/js/modules/controllers/otp/otp-ctrl.js"></script>
+   <script src="app/js/modules/controllers/signup/signup.js"></script>
+   <script src="app/js/modules/controllers/editProfile/editProfile.js"></script>
+   <script src="app/js/modules/controllers/forgotPasswordOtp/forgotPasswordOtp-ctrl.js"></script>
+   <script src="app/js/modules/controllers/resetPassword/resetPassword-ctrl.js"></script>
+   <script src="app/js/modules/controllers/Customer-otp/verifyotp.js"></script>
+
+   <!--Directives-->
+
+   <script src="app/js/modules/directives/allowPatern.js"></script>
+
+   <!-- Services-->
+
+   <script src="app/js/modules/services/browser.js"></script>
+   <script src="app/js/modules/services/colors.js"></script>
+   <script src="app/js/modules/services/google-map.js"></script>
+   <script src="app/js/modules/services/nav-search.js"></script>
+   <script src="app/js/modules/services/route-helpers.js"></script>
+   <script src="app/js/modules/services/toggle-state.js"></script>
+   <script src="app/js/modules/services/utils.js"></script>
+   <script src="app/js/modules/services/vector-map.js"></script>
+   <script src="vendor/bootbox/bootbox.js"></script>
+   <script src="vendor/intelinput/js/intlTelInput.js"></script>
+   <script src="bower_components/moment/moment.js"></script>
+   <script src="vendor/jstz/jstz.js"></script>
+</body>
+<style>
+   .dw-loading.dw-loading-overlay {
+      background-color: rgba(255, 255, 255, .7);
+      z-index: 0;
+   }
+   .iti-flag {
+      background-image: url("vendor/intelinput/img/flags.png");
+   }
+</style>
+</html>

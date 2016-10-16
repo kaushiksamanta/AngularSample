@@ -1,0 +1,483 @@
+<div dw-loading="signup">
+<div id="vivo-background">
+    <div class="container">
+        <div class="row" id="vivo-background-height">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <p id="vivo-welcome-text">
+                        Welcome To The Vivo Warriors
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="well">
+    <div class="container">
+        <div class="row" id="push-upper">
+            <div class="container" id="external-container">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="white-background">
+                    <div class="row">
+                        <p id="white-background-text">
+                            CREATE A NEW ACCOUNT
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0"></div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" style="margin: 10px 0px 15px 0px;">
+                            <button type="submit" class="page-scroll btn" id="indivisual" ng-class="{'Active':tab.corporate,'blue-tab':tab.indivisual}" ng-click="tab.indivisual=true;tab.corporate=false;initializeIntelInput();initializeIndivisulaAuto();">Individual</button>
+                            <button type="submit" class="page-scroll btn" id="corporate" ng-class="{'Active':tab.indivisual,'blue-tab':tab.corporate}" ng-click="tab.indivisual=false;tab.corporate=true;initializeIntelInput();getSportType();initializeCorporateAuto();">Corporate</button>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-0 col-xs-0"></div>
+                    </div>
+                    <div class="row">
+                        <div id="create-account-line"></div>
+                    </div>
+                    <div class="row">
+                            <div ng-if="tab.indivisual">
+                                <form name="indivisualForm" novalidate autocomplete="off" ng-submit="signup_indivisual(indivisualForm.$valid)">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input type="text" class="form-control input-grey" name="firstNameI" ng-model="indivisual.firstName" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.firstNameI.$dirty && indivisualForm.firstNameI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.firstNameI.$error.required">
+                                                        Firstname field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-control input-grey" name="lastNameI" ng-model="indivisual.lastName" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.lastNameI.$dirty && indivisualForm.lastNameI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.lastNameI.$error.required">
+                                                        Lastname field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="text" class="form-control input-grey" name="emailI" ng-model="indivisual.email" ng-pattern="/^.+@.+\..+$/" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.emailI.$dirty && indivisualForm.emailI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.emailI.$error.required">
+                                                        Email is required.
+                                                    </small>
+                                                    <small class="error text-danger"
+                                                           ng-show="indivisualForm.emailI.$invalid && !indivisualForm.emailI.$error.required">
+                                                        Please insert a valid email.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Phone Number</label>
+                                                <input type="tel" maxlength="10" class="form-control input-grey phone" required>
+                                                <small class="error text-danger phoneError"></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Billing Address</label>
+                                                <input type="text" id="autocompleteIndi" class="form-control input-grey" name="billingAddressI" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.billingAddressI.$dirty && indivisualForm.billingAddressI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.billingAddressI.$error.required">
+                                                        Billing Address is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>State</label>
+                                                <input type="text" class="form-control input-grey" name="stateI" ng-model="indivisual.state" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.stateI.$dirty && indivisualForm.stateI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.stateI.$error.required">
+                                                        State field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" class="form-control input-grey" ng-model="indivisual.city" name="cityI" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.cityI.$dirty && indivisualForm.cityI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.cityI.$error.required">
+                                                        City field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Postal Code</label>
+                                                <input type="text" class="form-control input-grey" name="postalI" ng-model="indivisual.postalCode" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.postalI.$dirty && indivisualForm.postalI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.postalI.$error.required">
+                                                        Postal code is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Country</label>
+                                                <input type="text" class="form-control input-grey" name="countryI" allow-pattern="[a-z\b ]" ng-model="indivisual.country" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.countryI.$dirty && indivisualForm.countryI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.countryI.$error.required">
+                                                        Country field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" class="form-control input-grey" name="passwordI" ng-model="indivisual.password" ng-pattern="/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/" required>
+                                                <div class="error"
+                                                     ng-show="indivisualForm.$submitted || indivisualForm.passwordI.$dirty && indivisualForm.passwordI.$invalid">
+                                                    <small class="error text-danger" ng-show="indivisualForm.passwordI.$error.required">
+                                                        Password is required.
+                                                    </small>
+                                                    <small class="error text-danger"
+                                                           ng-show="indivisualForm.passwordI.$invalid && !indivisualForm.passwordI.$error.required">
+                                                        Must enter character,numeric and special character
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 terms-agree-section">
+                                        <div class="row">
+                                            <p class="terms-agree-text">
+                                                I agree the Vivo Warriors' Terms.
+                                            </p>
+                                        </div>
+                                        <div class="row yes-no-section">
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" ng-model="indivisual.agreementYes" ng-click="agreementYes(indivisual.agreementYes)">Yes
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="checkbox" ng-model="indivisual.agreementNo" ng-click="agreementNo(indivisual.agreementNo)">No
+                                            </label>
+                                            <div class="error"
+                                                 ng-show="indivisualForm.$submitted">
+                                                <small class="error text-danger" ng-show="!indivisual.agreementYes && !indivisual.agreementNo">
+                                                    Please select one of the options.
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="row text-center">
+                                            <button type="submit" class="page-scroll btn submit-btn" ng-disabled="indivisual.agreementNo">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div ng-if="tab.corporate">
+                                <form name="corporateForm" novalidate autocomplete="off" ng-submit="signup_corporate(corporateForm.$valid)">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>First Name</label>
+                                                <input type="text" class="form-control input-grey" name="firstName" ng-model="corporate.firstName" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.firstName.$dirty && corporateForm.firstName.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.firstName.$error.required">
+                                                        Firstname field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-control input-grey" name="lastName" ng-model="corporate.lastName" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.lastName.$dirty && corporateForm.lastName.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.lastName.$error.required">
+                                                        Lastname field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="text" class="form-control input-grey" name="email" ng-model="corporate.email" ng-pattern="/^.+@.+\..+$/" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.email.$dirty && corporateForm.email.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.email.$error.required">
+                                                        Email is required.
+                                                    </small>
+                                                    <small class="error text-danger"
+                                                           ng-show="corporateForm.email.$invalid && !corporateForm.email.$error.required">
+                                                        Please insert a valid email.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <div class="form-group">
+                                                    <label>Phone Number</label>
+                                                    <input type="tel" maxlength="10" class="form-control input-grey phone" required>
+                                                    <small class="error text-danger phoneError"></small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Billing Address</label>
+                                                <input type="text" id="autocompleteCorp" class="form-control input-grey" name="billingAddress" ng-model="corporate.billingAddress" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.billingAddress.$dirty && corporateForm.billingAddress.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.billingAddress.$error.required">
+                                                        Billing Address is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>State</label>
+                                                <input type="text" class="form-control input-grey" name="state" ng-model="corporate.state" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.state.$dirty && corporateForm.state.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.state.$error.required">
+                                                        State field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" class="form-control input-grey" name="city" ng-model="corporate.city" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.city.$dirty && corporateForm.city.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.city.$error.required">
+                                                        City field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Postal Code</label>
+                                                <input type="text" class="form-control input-grey" name="postal" ng-model="corporate.postalCode" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.postal.$dirty && corporateForm.postal.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.postal.$error.required">
+                                                        Postal code is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row marginB22">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Country</label>
+                                                <input type="text" class="form-control input-grey" name="country" allow-pattern="[a-z\b ]" ng-model="corporate.country" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.country.$dirty && corporateForm.country.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.country.$error.required">
+                                                        Country field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" class="form-control input-grey" name="password" ng-model="corporate.password" ng-pattern="/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.password.$dirty && corporateForm.password.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.password.$error.required">
+                                                        Password is required.
+                                                    </small>
+                                                    <small class="error text-danger"
+                                                           ng-show="corporateForm.password.$invalid && !corporateForm.password.$error.required">
+                                                        Must enter character,numeric and special character
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <span class="corporate-users-only">For Corporate Users Only</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div id="corporate-users-line"></div>
+                                    </div>
+                                    <div class="row" style="margin-bottom: 2%;">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <p class="corporate-users-only" style="text-align: center;">Do you have in-house instructors ? <input type="checkbox" ng-model="corporate.type" ng-click="getSportType();"> </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Company Name</label>
+                                                <input type="text" class="form-control input-grey" name="companyName" ng-model="corporate.companyName" allow-pattern="[a-z\b ]" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.companyName.$dirty && corporateForm.companyName.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.companyName.$error.required">
+                                                        Company Name field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Company Centers</label>
+                                                <input type="text" class="form-control input-grey" name="companyCenters" ng-model="corporate.companyCenters" numbers-only="numbers-only" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.companyCenters.$dirty && corporateForm.companyCenters.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.companyCenters.$error.required">
+                                                        Company Name field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Company Size</label>
+                                                <select id="companySize"></select>
+                                                <!--<ui-select ng-model="corporate.companySize" theme="bootstrap" ng-disabled="disabled" ng-change="$select.search=null" name="companySize" required>-->
+                                                    <!--<ui-select-match placeholder="Select Company Size...">{{$select.selected}}</ui-select-match>-->
+                                                    <!--<ui-select-choices repeat="x in corporate.companySizeOptions">-->
+                                                        <!--<div ng-bind-html="x"></div>-->
+                                                    <!--</ui-select-choices>-->
+                                                <!--</ui-select>-->
+                                                <!--<div class="error"-->
+                                                     <!--ng-show="corporateForm.$submitted || corporateForm.companySize.$dirty && corporateForm.companySize.$invalid">-->
+                                                    <!--<small class="error text-danger" ng-show="corporateForm.companySize.$error.required">-->
+                                                        <!--Company Size field is required.-->
+                                                    <!--</small>-->
+                                                <!--</div>-->
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Company ID</label>
+                                                <input type="text" class="form-control input-grey" name="companyId" ng-model="corporate.companyId" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.companyId.$dirty && corporateForm.companyId.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.companyId.$error.required">
+                                                        Company Id field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" ng-if="!corporate.type">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Company Sports License</label>
+                                                <input type="text" class="form-control input-grey" name="sportLicense" ng-model="corporate.sportLicense" required>
+                                                <div class="error"
+                                                     ng-show="corporateForm.$submitted || corporateForm.sportLicense.$dirty && corporateForm.sportLicense.$invalid">
+                                                    <small class="error text-danger" ng-show="corporateForm.sportLicense.$error.required">
+                                                        Company Sports License field is required.
+                                                    </small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="form-group">
+                                                <label>Type of Sports License</label>
+                                                <select id="typeOfSport" multiple="multiple"></select>
+                                                <!--<ui-select multiple ng-model="corporate.sportLicenseType" theme="bootstrap" ng-disabled="disabled" ng-change="$select.search=null" name="sportLicenseType" required>-->
+                                                    <!--<ui-select-match placeholder="Select Type of sports...">{{$item.typeOfSport}}</ui-select-match>-->
+                                                    <!--<ui-select-choices repeat="x in corporate.sportLicenseOption | filter: $select.search">-->
+                                                        <!--<div ng-bind-html="x.typeOfSport"></div>-->
+                                                    <!--</ui-select-choices>-->
+                                                <!--</ui-select>-->
+                                                <!--<div class="error"-->
+                                                     <!--ng-show="corporateForm.$submitted || corporateForm.sportLicenseType.$dirty && corporateForm.sportLicenseType.$invalid">-->
+                                                    <!--<small class="error text-danger" ng-show="corporateForm.sportLicenseType.$error.required">-->
+                                                        <!--Type of Sports License field is required.-->
+                                                    <!--</small>-->
+                                                <!--</div>-->
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 terms-agree-section">
+                                    <div class="row">
+                                        <p class="terms-agree-text">
+                                            I agree the Vivo Warriors' Terms.
+                                        </p>
+                                    </div>
+                                    <div class="row yes-no-section">
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" ng-model="corporate.agreementYes" ng-click="agreementYes(corporate.agreementYes)">Yes
+                                        </label>
+                                        <label class="checkbox-inline">
+                                            <input type="checkbox" ng-model="corporate.agreementNo" ng-click="agreementNo(corporate.agreementNo)">No
+                                        </label>
+                                        <div class="error"
+                                             ng-show="indivisualForm.$submitted">
+                                            <small class="error text-danger" ng-show="!corporate.agreementYes && !corporate.agreementNo">
+                                                Please select one of the options.
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center">
+                                        <button type="submit" class="page-scroll btn submit-btn" ng-disabled="corporate.agreementNo">Submit</button>
+                                    </div>
+                                </div>
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<script>
+    $(document).ready(function(){
+        $('.multiselect.dropdown-toggle.btn.btn-default').css({
+            width: "100%",
+            overflow: "hidden",
+            "text-overflow": "ellipsis",
+            height: "41px",
+            "border-radius": "8px",
+            background: "#cccccc",
+            border: "none"
+        });
+    });
+</script>
